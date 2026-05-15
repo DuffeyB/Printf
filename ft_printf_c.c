@@ -6,8 +6,14 @@
 /*   By: bduffey <bduffey@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/14 14:48:29 by bduffey           #+#    #+#             */
-/*   Updated: 2026/05/14 14:48:31 by bduffey          ###   ########.fr       */
+/*   Updated: 2026/05/15 18:21:24 by bduffey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf.h"
 
+int	ft_printf_c(char c)
+{
+	ft_putchar_fd(c, 1);
+	return (1);
+}

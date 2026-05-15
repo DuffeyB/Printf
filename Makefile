@@ -6,14 +6,14 @@
 #    By: bduffey <bduffey@student.42lisboa.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/13 13:07:17 by bduffey           #+#    #+#              #
-#    Updated: 2026/05/13 13:25:33 by bduffey          ###   ########.fr        #
+#    Updated: 2026/05/15 18:40:30 by bduffey          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libftiprintf.a
+NAME = libftprintf.a
 
-SRCS = ft_printf.c ft_printf_chr.c ft_printf_str.c ft_print_hex.c \
-	   ft_printf_dec_int.c ft_printf_u.c
+SRCS = ft_printf.c ft_printf_c.c ft_printf_str.c ft_printf_hex.c \
+	   ft_printf_dec_int.c ft_printf_u.c ft_printf_ptr.c
 
 OBJS = $(SRCS:.c=.o)
 LIBFT_DIR = libft/
@@ -31,7 +31,7 @@ RM = rm -f
 	$(CC) $(CFLAGS) -c $< -o $@
 
 #---Archive all object files---------------#
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) $(LIBFT)
 	cp $(LIBFT) $(NAME)
 	$(AR) $(NAME) $(OBJS)
 
