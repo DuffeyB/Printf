@@ -3,7 +3,7 @@
 /*                                                       :::      ::::::::    */
 /*   ft_printf_hex.c                                   :+:      :+:    :+:    */
 /*                                                   +:+ +:+         +:+      */
-/*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
+/*   By: bduffey <bduffey@student.42lisboa.com>    #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/05/14 14:49:12 by username         #+#    #+#              */
 /*   Updated: 2026/05/15 18:06:26 by username        ###   ########.fr        */
