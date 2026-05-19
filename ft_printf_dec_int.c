@@ -3,7 +3,7 @@
 /*                                                       :::      ::::::::    */
 /*   ft_printf_dec_int.c                               :+:      :+:    :+:    */
 /*                                                   +:+ +:+         +:+      */
-/*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
+/*   By: bduffey <bduffey@student.42lisboa.com>    #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/05/14 14:48:58 by username         #+#    #+#              */
 /*   Updated: 2026/05/15 18:06:12 by username        ###   ########.fr        */
