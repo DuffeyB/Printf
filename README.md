@@ -27,6 +27,8 @@ The goal of this project is to understand:
 
 Instead of relying on the standard library implementation, this project builds formatted printing from the ground up using only allowed functions.
 
+Powered by a custom-built `libft` library developed throughout the 42 curriculum.
+
 ---
 
 ## ⚡ Supported Conversions
@@ -105,6 +107,13 @@ libftprintf.a
 │   ├── ft_putnbr.c
 │   ├── ft_puthex.c
 │   └── ...
+├── libft/
+│   ├── ft_atoi.c
+│   ├── ft_strlen.c
+│   ├── ft_strdup.c
+│   ├── ...
+│   ├── libft.h
+│   └── Makefile
 ├── Makefile
 └── README.md
 ```
