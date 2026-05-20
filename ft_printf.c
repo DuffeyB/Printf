@@ -31,12 +31,15 @@ static int	ft_find_type(const char *symbol, va_list args)
 		position += ft_printf_hex(va_arg(args, unsigned int), *symbol);
 	else if (*symbol == '%')
 		position += ft_printf_c('%');
+	else
+		return (-1);
 	return (position);
 }
 
 int	ft_printf(const char *symbol, ...)
 {
 	size_t	count;
+	int		printed;
 	va_list	args;
 
 	if (!symbol)
@@ -47,7 +50,10 @@ int	ft_printf(const char *symbol, ...)
 	{
 		if (*symbol == '%')
 		{
-			count += ft_find_type(++symbol, args);
+			printed = ft_find_type(++symbol, args);
+			if (printed == -1)
+				return (va_end(args), -1);
+			count += printed;
 		}
 		else
 			count += ft_printf_c(*symbol);

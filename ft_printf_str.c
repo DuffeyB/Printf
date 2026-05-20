@@ -12,10 +12,23 @@
 
 #include "ft_printf.h"
 
+static int	ft_putstr(char *str)
+{
+	size_t	i;
+
+	i = 0;
+	while (str[i])
+	{
+		ft_putchar_fd(str[i], 1);
+		i++;
+	}
+	return (i);
+}
+
 int	ft_printf_str(char *str)
 {
 	if (!str)
-		str = "(NULL)";
-	ft_putstr_fd(str, 1);
+		str = "(null)";
+	ft_putstr(str);
 	return (ft_strlen(str));
 }

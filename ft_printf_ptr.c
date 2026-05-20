@@ -12,6 +12,19 @@
 
 #include "ft_printf.h"
 
+static int	ft_putstr(char *str)
+{
+	size_t	i;
+
+	i = 0;
+	while (str[i])
+	{
+		ft_putchar_fd(str[i], 1);
+		i++;
+	}
+	return (i);
+}
+
 static int	ft_put_hex(unsigned long nb, int fd, char add)
 {
 	char			c;
@@ -35,6 +48,8 @@ int	ft_printf_ptr(void *ptr)
 	int				count;
 	unsigned long	nb;
 
+	if (!ptr)
+		return (ft_putstr("(nil)"));
 	nb = (unsigned long) ptr;
 	count = 0;
 	ft_putstr_fd("0x", 1);
