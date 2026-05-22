@@ -14,20 +14,31 @@ CFLAGS = -Wall -Wextra -Werror -I.
 AR = ar rcs
 RM = rm -f
 
-%.o: %.c libft.h
-	$(CC) $(CFLAGS) -c $< -o $@
+################################# RULES #################################
 
+#---Default build target-------------------#
+all: $(NAME)
+
+#---Create library archive-----------------#
 $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
-all: $(NAME)
+#---Compile .c files into .o files--------#
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
+################################ TARGETS ################################
+
+#---Remove object files--------------------#
 clean:
 	$(RM) $(OBJS)
 
+#---Remove objects + library--------------#
 fclean: clean
 	$(RM) $(NAME)
 
+#---Full rebuild---------------------------#
 re: fclean all
 
+#---Prevent file name conflicts-----------#
 .PHONY: all clean fclean re
